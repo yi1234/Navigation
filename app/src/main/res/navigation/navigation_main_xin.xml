@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_main"
+    android:id="@+id/navigation_main_xin.xml">
+
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.hhe.navigation.ui.MainFragment"
+        android:label="main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mine_to_setting"
+            app:destination="@id/setting_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mine_to_card"
+            app:destination="@id/card_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mine_to_money"
+            app:destination="@id/money_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/setting_fragment"
+        android:name="com.hhe.navigation.ui.SettingFragment"
+        android:label="设置"
+        tools:layout="@layout/fragment_setting">
+
+        <action
+            android:id="@+id/action_setting_to_person_info"
+            app:destination="@id/person_info_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/card_fragment"
+        android:name="com.hhe.navigation.ui.CardFragment"
+        android:label="卡包"
+        tools:layout="@layout/fragment_card">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/money_fragment"
+        android:name="com.hhe.navigation.ui.MoneyFragment"
+        android:label="钱包"
+        tools:layout="@layout/fragment_money" />
+    <fragment
+        android:id="@+id/person_info_fragment"
+        android:name="com.hhe.navigation.ui.PersonInfoFragment"
+        android:label="个人信息"
+        tools:layout="@layout/fragment_person_info"/>
+
+</navigation>
